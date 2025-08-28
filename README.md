@@ -12,13 +12,13 @@ foco em conceitos avançados do **React 19**.
 ## 🚀 Funcionalidades
 
 -   **Preview em tempo real**: alterações no formulário refletem
-    imediatamente no currículo.\
+    imediatamente no currículo.
 -   **Layout desktop**: tela dividida em duas colunas (formulário à
-    esquerda e preview à direita).\
+    esquerda e preview à direita).
 -   **Listas dinâmicas**: adicionar/remover **habilidades** e
-    **experiências profissionais**.\
+    **experiências profissionais**.
 -   **Validações em tempo real**: campos obrigatórios e contadores de
-    caracteres.\
+    caracteres.
 -   **Design moderno**: interface clean e organizada usando
     **TailwindCSS v4**.
 
