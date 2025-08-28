@@ -26,9 +26,9 @@ foco em conceitos avançados do **React 19**.
 
 ## 🛠️ Tecnologias Utilizadas
 
--   ⚛️ [React 19](https://react.dev/)\
--   📘 [TypeScript](https://www.typescriptlang.org/)\
--   🎨 [TailwindCSS v4](https://tailwindcss.com/)\
+-   ⚛️ [React 19](https://react.dev/)
+-   📘 [TypeScript](https://www.typescriptlang.org/)
+-   🎨 [TailwindCSS v4](https://tailwindcss.com/)
 -   ⚡ [Vite](https://vitejs.dev/)
 
 ------------------------------------------------------------------------
