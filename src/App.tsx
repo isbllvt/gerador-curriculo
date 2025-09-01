@@ -1,4 +1,3 @@
-// src/App.tsx
 import React from "react";
 import FormContainer from "./components/FormContainer";
 import PreviewContainer from "./components/PreviewContainer";
