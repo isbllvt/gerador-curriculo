@@ -12,3 +12,7 @@ export interface Experience {
     description: string;
     isCurrent: boolean;
 }
+
+export interface Resumo {
+    summary: string;
+}
