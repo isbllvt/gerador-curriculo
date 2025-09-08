@@ -1,17 +1,14 @@
+import axios from "axios";
+
 interface ResumeAIProps {
   texto: string;
 }
 
 export async function improveResume({ texto }: ResumeAIProps) {
   // Exemplo: chamada a uma API
-  const resposta = await fetch("/api/improve-resume", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ texto }),
-  });
+  const resposta = await axios.post("/api/improve-resume", { texto });
 
-  const data = await resposta.json();
-  return data.textoMelhorado;
+  return resposta.data.textoMelhorado;
 }
 
 export const handleImproveResume = async ({

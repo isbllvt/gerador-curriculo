@@ -1,11 +1,12 @@
 import express from "express";
-import ViteExpress from "vite-express";
 import Groq from "groq-sdk";
 import dotenv from "dotenv";
+import cors from "cors";
 
 dotenv.config();
 
 const app = express();
+app.use(cors());
 app.use(express.json());
 
 // Cliente GROQ (SDK oficial)
@@ -20,7 +21,8 @@ app.post("/api/improve-resume", async (req, res) => {
       messages: [
         {
           role: "system",
-          content: "Você é um assistente que melhora resumos profissionais. Não adicione informações novas e só retorne o texto melhorado.",
+          content:
+            "Você é um assistente que melhora resumos profissionais. Não adicione informações novas e só retorne o texto melhorado.",
         },
         {
           role: "user",
@@ -29,16 +31,20 @@ app.post("/api/improve-resume", async (req, res) => {
       ],
       model: "compound-beta-mini", // model Groq
     });
-     const textoMelhorado = completion.choices[0]?.message?.content || texto;
+    const textoMelhorado = completion.choices[0]?.message?.content || texto;
     res.json({ textoMelhorado });
-
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: "Erro ao processar o texto" });
   }
 });
 
-// Vite + Express juntos em dev
-ViteExpress.listen(app, 3000, () => {
-  console.log("Dev server em http://localhost:3000");
+//
+app.listen(3001, () => {
+  console.log("Servidor em http://localhost:3001");
 });
+
+// Vite + Express juntos em dev
+// ViteExpress.listen(app, 3000, () => {
+//   console.log("Dev server em http://localhost:3000");
+// });

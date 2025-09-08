@@ -16,22 +16,22 @@ const App: React.FC = () => {
   const [experiences, setExperiences] = useState<Experience[]>([]);
 
   return (
-    <div className="h-screen w-screen grid grid-cols-2">
+    <div className="h-full w-full grid grid-cols-2 divide-x-2 divide-dashed divide-black-300">
       {/* Coluna esquerda */}
-      <FormContainer 
-        dados={dados} 
-        setDados={setDados} 
-        skills={skills} 
-        setSkills={setSkills} 
-        experiences={experiences} 
-        setExperiences={setExperiences} 
+      <FormContainer
+        dados={dados}
+        setDados={setDados}
+        skills={skills}
+        setSkills={setSkills}
+        experiences={experiences}
+        setExperiences={setExperiences}
       />
 
       {/* Coluna direita */}
-      <PreviewContainer 
-        dados={dados} 
-        skills={skills} 
-        experiences={experiences} 
+      <PreviewContainer
+        dados={dados}
+        skills={skills}
+        experiences={experiences}
       />
     </div>
   );
