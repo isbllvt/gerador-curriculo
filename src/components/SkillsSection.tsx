@@ -25,13 +25,18 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({ skills, setSkills }) => {
   };
 
   return (
-    <div className="mt-6">
-      <h3 className="text-2xl font-bold mb-4">Habilidades</h3>
+    <div className="mt-6 flex flex-col">
+      <h3 className="text-2xl font-bold">Habilidades</h3>
 
       <div className="space-y-2 mb-4">
         {skills.map((skill) => (
-          <div key={skill.id} className="flex justify-between items-center bg-gray-100 p-2 rounded">
-            <span>{skill.name} ({skill.level})</span>
+          <div
+            key={skill.id}
+            className="flex justify-between items-center bg-gray-100 p-2 rounded"
+          >
+            <span>
+              {skill.name} ({skill.level})
+            </span>
             <button
               onClick={() => handleRemoveSkill(skill.id)}
               className="text-red-500"
@@ -52,7 +57,12 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({ skills, setSkills }) => {
         />
         <select
           value={newSkill.level}
-          onChange={(e) => setNewSkill({ ...newSkill, level: e.target.value as Skill["level"] })}
+          onChange={(e) =>
+            setNewSkill({
+              ...newSkill,
+              level: e.target.value as Skill["level"],
+            })
+          }
           className="p-2 border rounded"
         >
           <option>Básico</option>

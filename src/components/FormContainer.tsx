@@ -22,10 +22,13 @@ const FormContainer: React.FC<FormContainerProps> = ({
   setExperiences,
 }) => {
   return (
-    <div className="p-6 h-full overflow-y-auto bg-white shadow-md">
+    <div className="flex flex-col p-6 gap-2 overflow-y-auto bg-white shadow-md">
       <FormularioDadosPessoais dados={dados} setDados={setDados} />
       <SkillsSection skills={skills} setSkills={setSkills} />
-      <ExperienceSection experiences={experiences} setExperiences={setExperiences} />
+      <ExperienceSection
+        experiences={experiences}
+        setExperiences={setExperiences}
+      />
     </div>
   );
 };
